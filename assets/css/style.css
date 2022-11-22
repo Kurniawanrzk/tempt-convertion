@@ -1,0 +1,40 @@
+
+.container-fluid {
+	height:100vh;
+	background-color:#292a2c;
+}
+
+.konversi-container {
+	display:flex;
+	width:100%;
+	justify-content:center;
+}
+
+.form-group select {
+	background-color:#242424;
+	border:1px solid #1a1a1a;
+	color:white;
+	font-size:20px;
+	border-radius:0px;
+	color:#afafaf;
+}
+
+.form-group select:focus{
+	background-color:#242424;
+	color:#afafaf;
+	outline:none;
+}
+
+.hasil-konversi textarea {
+	border-radius:0px;
+	background-color:#242424 !important;
+	border:1px solid #1a1a1a;
+	color:white;
+	height:140px;
+}
+
+.hasil-konversi textarea:focus {
+	background-color:#242424;
+	color:white;
+
+}
