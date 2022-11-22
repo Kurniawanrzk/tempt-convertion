@@ -23,7 +23,8 @@
 					</select>
 				</div>
 				<div class="hasil-konversi">
-					<textarea id="first-ipt" class="form-control"></textarea>
+					<textarea id="first-ipt" 
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" class="form-control"></textarea>
 				</div>
 			</div>	
 			<div class="col-5">
