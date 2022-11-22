@@ -4,6 +4,10 @@ window.addEventListener('load', () => {
 		firstIpt = document.getElementById("first-ipt"),
 		secondIpt = document.getElementById("second-ipt")
 
+	if(firstSelect.value === "0" && secondSelect.value === "0") {
+		firstIpt.disabled = true;
+	}
+
 	firstIpt.addEventListener('keyup', () => {
 		
 			if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
@@ -72,6 +76,13 @@ window.addEventListener('load', () => {
 	})
 
 	firstSelect.addEventListener("change", () => {
+		
+			if(firstSelect.value === "0" || secondSelect.value === "0") {
+				firstIpt.disabled = true;
+			}else {
+				firstIpt.disabled = false;
+			}		
+			
 			if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
 				// Celcius -> Farenheit
 				 secondIpt.value = (parseInt(firstIpt.value)  * 9/5) + 32 		
@@ -134,10 +145,16 @@ window.addEventListener('load', () => {
 				 secondIpt.value = parseInt(firstIpt.value)  * 5/9 
 			} else if(firstSelect.value === secondSelect.value  && firstIpt.value !== "") {
 				 secondIpt.value = firstIpt.value	
-			} 	
+			} 
 	})
 
-	secondSelect.addEventListener("change", () => {
+	secondSelect.addEventListener("change", () => {	
+			
+			if(firstSelect.value === "0" || secondSelect.value === "0") {
+				firstIpt.disabled = true;
+			}else {
+				firstIpt.disabled = false;
+			}		
 			if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
 				// Celcius -> Farenheit
 				 secondIpt.value = (parseInt(firstIpt.value)  * 9/5) + 32 		
