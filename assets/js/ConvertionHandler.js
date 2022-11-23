@@ -3,23 +3,21 @@ const firstSelect = document.getElementById("first-select"),
 	firstIpt = document.getElementById("first-ipt"),
 	secondIpt = document.getElementById("second-ipt")
 
-// Line kode ini berguna untuk, setiap user melakukan event input, convertion akan berjalan
-firstIpt.addEventListener('input', () => {
-	convertion()
-})
+// Line kode ini berguna untuk, setiap user melakukan event input, Convertion akan berjalan
+firstIpt.addEventListener('input', Convertion)
 
-// Line kode ini berguna untuk, setiap user melakukan event change, convertion akan berjalan
-firstSelect.addEventListener("change", () => {
-	convertion()
-})
+// Line kode ini berguna untuk, setiap user melakukan event change, Convertion akan berjalan
+firstSelect.addEventListener("change",  Convertion)
 
-// Line kode ini berguna untuk, setiap user melakukan event change, convertion akan berjalan
-secondSelect.addEventListener("change", () => {	
-	convertion()
-})
+// Line kode ini berguna untuk, setiap user melakukan event change, Convertion akan berjalan
+secondSelect.addEventListener("change", Convertion)
+
+// Mengaktifkan fungsi InputHandler agar text field tidak bisa selain angka
+firstIpt.addEventListener('input', InputHandler)
+
 
 // Fungsi ini berfungsi untuk mengkonversi suhu
-function convertion() {	
+function Convertion() {	
 	
 	if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
 		// Celcius -> Farenheit
