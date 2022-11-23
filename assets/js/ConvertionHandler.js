@@ -3,14 +3,17 @@ const firstSelect = document.getElementById("first-select"),
 	firstIpt = document.getElementById("first-ipt"),
 	secondIpt = document.getElementById("second-ipt")
 
+// Line kode ini berguna untuk, setiap user melakukan event keyup, convertion akan berjalan
 firstIpt.addEventListener('keyup', () => {
 	convertion()
 })
 
+// Line kode ini berguna untuk, setiap user melakukan event change, convertion akan berjalan
 firstSelect.addEventListener("change", () => {
 	convertion()
 })
 
+// Line kode ini berguna untuk, setiap user melakukan event change, convertion akan berjalan
 secondSelect.addEventListener("change", () => {	
 	convertion()
 })
