@@ -4,7 +4,7 @@ const firstSelect = document.getElementById("first-select"),
 	secondIpt = document.getElementById("second-ipt")
 
 // Line kode ini berguna untuk, setiap user melakukan event keyup, convertion akan berjalan
-firstIpt.addEventListener('keyup', () => {
+firstIpt.addEventListener('input', () => {
 	convertion()
 })
 
@@ -18,6 +18,7 @@ secondSelect.addEventListener("change", () => {
 	convertion()
 })
 
+// Fungsi ini berfungsi untuk mengkonversi suhu
 function convertion() {	
 	
 	if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
@@ -85,6 +86,11 @@ function convertion() {
 	} else if(firstIpt.value == "") {
 		secondIpt.value = ""
 	}
+}
+
+// Fungsi ini berfungsi agar text field tidak bisa di input dengan selain angka
+function InputHandler(ipt) {
+	ipt.value = ipt.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')
 }
 
 

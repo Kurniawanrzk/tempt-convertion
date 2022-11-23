@@ -8,22 +8,21 @@
 	<link href="vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+	<!-- CREATED BY gh : Kurniawanrzk AND gh : brotherzhafif -->
 	<div class="container-fluid ">
 		<div class="konversi-container pt-5">
 			<div class="col-5">
 				<div class="form-group">
 					<select id="first-select" class="form-control">
-						<option value="1">Celcius</option > 
-						<option value="2">Farenheit</option > 
+						<option value="1">Celcius</option> 
+						<option value="2">Farenheit</option> 
 						<option value="3">Reamur</option>
 						<option value="4">Kelvin</option>
 						<option value="5">Rankie</option>
-
 					</select>
 				</div>
 				<div class="hasil-konversi">
-					<textarea id="first-ipt" 
-						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" class="form-control"></textarea>
+					<textarea id="first-ipt" oninput="InputHandler(this)" class="form-control"></textarea>
 				</div>
 			</div>	
 			<div class="col-5">
@@ -40,7 +39,6 @@
 					<textarea id="second-ipt" class="form-control" disabled></textarea>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
