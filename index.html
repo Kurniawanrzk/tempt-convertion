@@ -22,8 +22,15 @@
 					</select>
 				</div>
 				<div class="hasil-konversi">
-					<textarea id="first-ipt" class="form-control"></textarea>
+					<textarea
+					 id="first-ipt"
+					  class="form-control"
+					 oninput="return this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')"					 " 
+					  ></textarea>
 				</div>
+				<button class="btn btn-success m-2" id="tukar-btn">Tukar</button>
+				<button class="btn btn-danger m-2" id="copy-btn-first">Copy</button>
+				<button class="btn btn-light m-2" id="hear-btn-first">Hear</button>
 			</div>	
 			<div class="col-5">
 				<div class="form-group">
@@ -38,11 +45,17 @@
 				<div class="hasil-konversi">
 					<textarea id="second-ipt" class="form-control" disabled></textarea>
 				</div>
+				<button class="btn btn-danger m-2" id="copy-btn-second">Copy</button>
+				<button class="btn btn-light m-2" id="hear-btn-second">Hear</button>
 			</div>
 		</div>
 	</div>
 
 	<script src="assets/js/ConvertionHandler.js"></script>
+	<script src="assets/js/SwitchTempt.js"></script>
+	<script src="assets/js/CopyNum.js"></script>
+	<script src="assets/js/NumToVoice.js"></script>
+	<script src="https://code.responsivevoice.org/responsivevoice.js?key=dTNFfN3Z"></script>
 	<script src="vendor/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

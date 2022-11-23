@@ -1,7 +1,14 @@
 const firstSelect = document.getElementById("first-select"),
 	secondSelect = document.getElementById("second-select"),
 	firstIpt = document.getElementById("first-ipt"),
-	secondIpt = document.getElementById("second-ipt")
+	secondIpt = document.getElementById("second-ipt"),
+	switchTempt = document.getElementById("tukar-btn"),
+	copyIptFirst = document.getElementById("copy-btn-first"),
+	copyIptSecond = document.getElementById("copy-btn-second"),
+	hearBtnFirst = document.getElementById("hear-btn-first"),
+	hearBtnSecond = document.getElementById("hear-btn-second")
+	
+
 
 // Line kode ini berguna untuk, setiap user melakukan event input, Convertion akan berjalan
 firstIpt.addEventListener('input', Convertion)
@@ -11,9 +18,6 @@ firstSelect.addEventListener("change",  Convertion)
 
 // Line kode ini berguna untuk, setiap user melakukan event change, Convertion akan berjalan
 secondSelect.addEventListener("change", Convertion)
-
-// Mengaktifkan fungsi InputHandler agar text field tidak bisa selain angka
-firstIpt.addEventListener('input', InputHandler)
 
 
 // Fungsi ini berfungsi untuk mengkonversi suhu
@@ -85,10 +89,4 @@ function Convertion() {
 		secondIpt.value = ""
 	}
 }
-
-// Fungsi ini berfungsi agar text field tidak bisa di input dengan selain angka
-function InputHandler(ipt) {
-	ipt.value = ipt.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')
-}
-
 
