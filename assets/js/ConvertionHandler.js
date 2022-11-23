@@ -3,7 +3,7 @@ const firstSelect = document.getElementById("first-select"),
 	firstIpt = document.getElementById("first-ipt"),
 	secondIpt = document.getElementById("second-ipt")
 
-// Line kode ini berguna untuk, setiap user melakukan event keyup, convertion akan berjalan
+// Line kode ini berguna untuk, setiap user melakukan event input, convertion akan berjalan
 firstIpt.addEventListener('input', () => {
 	convertion()
 })
