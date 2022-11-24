@@ -6,7 +6,8 @@ const firstSelect = document.getElementById("first-select"),
 	copyIptFirst = document.getElementById("copy-btn-first"),
 	copyIptSecond = document.getElementById("copy-btn-second"),
 	hearBtnFirst = document.getElementById("hear-btn-first"),
-	hearBtnSecond = document.getElementById("hear-btn-second")
+	hearBtnSecond = document.getElementById("hear-btn-second"),
+	SaveBtn = document.getElementById("sv-current-val")
 	
 
 
