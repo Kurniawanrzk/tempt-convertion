@@ -89,5 +89,9 @@ function Convertion() {
 	} else if(firstIpt.value == "") {
 		secondIpt.value = ""
 	}
+	
+	if(secondIpt.value == "NaN") {
+		secondIpt.value = ""
+	}
 }
 
