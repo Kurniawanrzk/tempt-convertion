@@ -1,6 +1,5 @@
 // THE CONVERTION HANDLER 
 
-
 // This line of code is for, every user that do input event, is gonna run Convertion Function
 firstIpt.addEventListener('input', Convertion)
 
