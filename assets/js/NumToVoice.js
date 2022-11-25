@@ -1,26 +1,44 @@
 hearBtnFirst.addEventListener('click', () => {
-    if(firstIpt.value !== "") {  
+    if(firstIpt.value !== "" && localStorage.getItem("lang") == "id") {  
         responsiveVoice.speak(
             firstSelect.value == "1" ? 
-            firstIpt.value.replace(".", ",") + "°C" : firstSelect.value == "2" ? 
-            firstIpt.value.replace(".", ",") + "°F" : firstSelect.value == "3" ? 
+            firstIpt.value.replace(".", ",") + "°Celcius" : firstSelect.value == "2" ? 
+            firstIpt.value.replace(".", ",") + "°Farenheit" : firstSelect.value == "3" ? 
             firstIpt.value.replace(".", ",") + "°Reamur" : firstSelect.value == "4" ? 
             firstIpt.value.replace(".", ",") + "Kelvin" : firstSelect.value == "5" ? 
             firstIpt.value.replace(".", ",") + "°Rankain" : "", 'Indonesian Female')
-    } else {
+    } else if(firstIpt.value !== "" && localStorage.getItem("lang") == "en") {  
+        responsiveVoice.speak(
+            firstSelect.value == "1" ? 
+            firstIpt.value.replace(".", ",").replace("-", "minus") + "°Celcius" : firstSelect.value == "2" ? 
+            firstIpt.value.replace(".", ",").replace("-", "minus") + "°Farenheit" : firstSelect.value == "3" ? 
+            firstIpt.value.replace(".", ",").replace("-", "minus") + "°Reamur" : firstSelect.value == "4" ? 
+            firstIpt.value.replace(".", ",").replace("-", "minus") + "Kelvin" : firstSelect.value == "5" ? 
+            firstIpt.value.replace(".", ",").replace("-", "minus") + "°Rankine" : "", 'US English Female')
+    }  else if(firstIpt.value == "" && localStorage.getItem("lang") == "id") {
         AlertHandler("Silahkan Masukkan Angka!", "warning")
-
+    } else {
+        AlertHandler("Please Insert the number!", "warning")
     }
 })
 hearBtnSecond.addEventListener('click', () => {
-    if(secondIpt.value !== "") {
+    if(secondIpt.value !== "" && localStorage.getItem("lang") == "id") {
         responsiveVoice.speak(secondSelect.value == "1" ? 
-            secondIpt.value.replace(".", ",") + "°C" : secondSelect.value == "2" ? 
-            secondIpt.value.replace(".", ",") + "°F" : secondSelect.value == "3" ? 
+            secondIpt.value.replace(".", ",") + "°Celcius" : secondSelect.value == "2" ? 
+            secondIpt.value.replace(".", ",") + "°Farenheit" : secondSelect.value == "3" ? 
             secondIpt.value.replace(".", ",") + "°Reamur" : secondSelect.value == "4" ? 
             secondIpt.value.replace(".", ",") + "Kelvin" : secondSelect.value == "5" ? 
             secondIpt.value.replace(".", ",") + "°Rankine" : "", 'Indonesian Female')
-    } else {
+    }else if(secondIpt.value !== "" && localStorage.getItem("lang") == "en") {
+        responsiveVoice.speak(secondSelect.value == "1" ? 
+            secondIpt.value.replace(".", ",").replace("-", "minus") + "°Celcius" : secondSelect.value == "2" ? 
+            secondIpt.value.replace(".", ",").replace("-", "minus") + "°Farenheit" : secondSelect.value == "3" ? 
+            secondIpt.value.replace(".", ",").replace("-", "minus") + "°Reamur" : secondSelect.value == "4" ? 
+            secondIpt.value.replace(".", ",").replace("-", "minus") + "Kelvin" : secondSelect.value == "5" ? 
+            secondIpt.value.replace(".", ",").replace("-", "minus") + "°Rankine" : "", 'US English Female')
+    } else if(secondIpt.value == "" && localStorage.getItem("lang") == "id") {
         AlertHandler("Silahkan Masukkan Angka!", "warning")
+    } else {
+        AlertHandler("Please Insert the number!", "warning")
     }
 })
