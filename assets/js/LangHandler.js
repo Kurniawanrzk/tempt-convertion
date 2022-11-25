@@ -34,8 +34,20 @@ function changeLanguageHtmlHandler(langVal) {
     if(langVal === "id") {
         langSelect.value = "id"
         switchTempt.innerHTML = "Tukar"
+        copyIptFirst.innerHTML = "Salin"
+        copyIptSecond.innerHTML = "Salin"
+        hearBtnFirst.innerHTML = "Dengar"
+        hearBtnSecond.innerHTML = "Dengar"
+        SaveBtn.innerHTML = "Simpan"
+
+
     } else{
         langSelect.value = "en"
         switchTempt.innerHTML = "Switch"
+        copyIptFirst.innerHTML = "Copy"
+        copyIptSecond.innerHTML = "Copy"
+        hearBtnFirst.innerHTML = "Hear"
+        hearBtnSecond.innerHTML = "Hear"
+        SaveBtn.innerHTML = "Save"
     }
 }
