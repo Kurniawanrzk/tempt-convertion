@@ -10,44 +10,55 @@
 <body>
 	<!-- CREATED BY gh : Kurniawanrzk AND gh : brotherzhafif -->
 	<div class="container-fluid ">
-		<div class="konversi-container pt-5">
-			<div class="col-5">
-				<div class="form-group">
-					<select id="first-select" class="form-control">
-						<option value="1">Celcius</option> 
-						<option value="2">Farenheit</option> 
-						<option value="3">Reamur</option>
-						<option value="4">Kelvin</option>
-						<option value="5">Rankie</option>
-					</select>
-				</div>
-				<div class="hasil-konversi">
-					<textarea
-					 id="first-ipt"
-					  class="form-control"
-					 oninput="return this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')"					 " 
-					  ></textarea>
-				</div>
-				<button class="btn btn-success m-2" id="tukar-btn">Tukar</button>
-				<button class="btn btn-danger m-2" id="copy-btn-first">Copy</button>
-				<button class="btn btn-light m-2" id="hear-btn-first">Hear</button>
-				<button class="btn btn-primary m-2" id="sv-current-val">Save</button>
-			</div>	
-			<div class="col-5">
-				<div class="form-group">
-					<select id="second-select" class="form-control">
-						<option value="1">Celcius</option> 
-						<option value="2" selected>Farenheit</option> 
-						<option value="3">Reamur</option>
-						<option value="4">Kelvin</option>
-						<option value="5">Rankie</option>
-					</select>
+		<div>
+			<div id="alert-container" class="col-4 pt-5 ps-5">
+			</div>
+			<div class="konversi-container pt-5">
+				<div class="col-5">
+					<div class="form-group">
+						<select id="first-select" class="form-control">
+							<option value="1">Celcius</option> 
+							<option value="2">Farenheit</option> 
+							<option value="3">Reamur</option>
+							<option value="4">Kelvin</option>
+							<option value="5">Rankie</option>
+						</select>
+					</div>
+					<div class="hasil-konversi">
+						<textarea
+						 id="first-ipt"
+						  class="form-control"
+						 oninput="return this.value = this.value.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')"					 " 
+						  ></textarea>
+					</div>
+					<button class="btn btn-success m-2" id="tukar-btn">Tukar</button>
+					<button class="btn btn-danger m-2" id="copy-btn-first">Copy</button>
+					<button class="btn btn-light m-2" id="hear-btn-first">Hear</button>
+					<button class="btn btn-primary m-2" id="sv-current-val">Save</button>
+					<span class="col-1 d-block">
+						<select name="" id="lang-select" class="form-control">
+							<option value="">Select The Lang</option>
+							<option value="id">id</option>
+							<option value="en">en</option>
+						</select>
+				</span>
 				</div>	
-				<div class="hasil-konversi">
-					<textarea id="second-ipt" class="form-control" disabled></textarea>
+				<div class="col-5">
+					<div class="form-group">
+						<select id="second-select" class="form-control">
+							<option value="1">Celcius</option> 
+							<option value="2" selected>Farenheit</option> 
+							<option value="3">Reamur</option>
+							<option value="4">Kelvin</option>
+							<option value="5">Rankie</option>
+						</select>
+					</div>	
+					<div class="hasil-konversi">
+						<textarea id="second-ipt" class="form-control" disabled></textarea>
+					</div>
+					<button class="btn btn-danger m-2" id="copy-btn-second">Copy</button>
+					<button class="btn btn-light m-2" id="hear-btn-second">Hear</button>
 				</div>
-				<button class="btn btn-danger m-2" id="copy-btn-second">Copy</button>
-				<button class="btn btn-light m-2" id="hear-btn-second">Hear</button>
 			</div>
 		</div>
 	</div>
@@ -57,7 +68,21 @@
 	<script src="assets/js/CopyNum.js"></script>
 	<script src="assets/js/NumToVoice.js"></script>
 	<script src="assets/js/SaveVal.js"></script>
+	<script src="assets/js/LangHandler.js"></script>
 	<script src="https://code.responsivevoice.org/responsivevoice.js?key=dTNFfN3Z"></script>
 	<script src="vendor/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+	const firstSelect = document.getElementById("first-select"),
+		secondSelect = document.getElementById("second-select"),
+		firstIpt = document.getElementById("first-ipt"),
+		secondIpt = document.getElementById("second-ipt"),
+		switchTempt = document.getElementById("tukar-btn"),
+		copyIptFirst = document.getElementById("copy-btn-first"),
+		copyIptSecond = document.getElementById("copy-btn-second"),
+		hearBtnFirst = document.getElementById("hear-btn-first"),
+		hearBtnSecond = document.getElementById("hear-btn-second"),
+		SaveBtn = document.getElementById("sv-current-val"),
+		langSelect = document.getElementById("lang-select")
+	</script>
 </body>
 </html>

@@ -6,7 +6,10 @@ hearBtnFirst.addEventListener('click', () => {
             firstIpt.value.replace(".", ",") + "°F" : firstSelect.value == "3" ? 
             firstIpt.value.replace(".", ",") + "°Reamur" : firstSelect.value == "4" ? 
             firstIpt.value.replace(".", ",") + "Kelvin" : firstSelect.value == "5" ? 
-            firstIpt.value.replace(".", ",") + "°Rankine" : "", 'Indonesian Female')
+            firstIpt.value.replace(".", ",") + "°Rankain" : "", 'Indonesian Female')
+    } else {
+        AlertHandler("Silahkan Masukkan Angka!", "warning")
+
     }
 })
 hearBtnSecond.addEventListener('click', () => {
@@ -17,5 +20,7 @@ hearBtnSecond.addEventListener('click', () => {
             secondIpt.value.replace(".", ",") + "°Reamur" : secondSelect.value == "4" ? 
             secondIpt.value.replace(".", ",") + "Kelvin" : secondSelect.value == "5" ? 
             secondIpt.value.replace(".", ",") + "°Rankine" : "", 'Indonesian Female')
+    } else {
+        AlertHandler("Silahkan Masukkan Angka!", "warning")
     }
 })

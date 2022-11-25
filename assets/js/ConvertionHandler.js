@@ -1,23 +1,13 @@
-const firstSelect = document.getElementById("first-select"),
-	secondSelect = document.getElementById("second-select"),
-	firstIpt = document.getElementById("first-ipt"),
-	secondIpt = document.getElementById("second-ipt"),
-	switchTempt = document.getElementById("tukar-btn"),
-	copyIptFirst = document.getElementById("copy-btn-first"),
-	copyIptSecond = document.getElementById("copy-btn-second"),
-	hearBtnFirst = document.getElementById("hear-btn-first"),
-	hearBtnSecond = document.getElementById("hear-btn-second"),
-	SaveBtn = document.getElementById("sv-current-val")
-	
+// THE CONVERTION HANDLER 
 
 
-// Line kode ini berguna untuk, setiap user melakukan event input, Convertion akan berjalan
+// This line of code is for, every user that do input event, is gonna run Convertion Function
 firstIpt.addEventListener('input', Convertion)
 
-// Line kode ini berguna untuk, setiap user melakukan event change, Convertion akan berjalan
+// This line of code is for, every user that do select event, is gonna run Convertion Function
 firstSelect.addEventListener("change",  Convertion)
 
-// Line kode ini berguna untuk, setiap user melakukan event change, Convertion akan berjalan
+// This line of code is for, every user that do select event, is gonna run Convertion Function
 secondSelect.addEventListener("change", Convertion)
 
 
@@ -26,7 +16,7 @@ function Convertion() {
 	
 	if(firstSelect.value === "1" && secondSelect.value === "2" && firstIpt.value !== "") {
 		// Celcius -> Farenheit
-		 secondIpt.value = (parseInt(firstIpt.value)  * 9/5) + 32 		
+		 secondIpt.value = (parseInt(firstIpt.value) * 9/5) + 32 		
 	}else if(firstSelect.value === "1" && secondSelect.value === "3" && firstIpt.value !== "") {
 		// Celcius -> Reamur
 		 secondIpt.value =  (4 / 5) * parseInt(firstIpt.value)	
@@ -95,3 +85,12 @@ function Convertion() {
 	}
 }
 
+// This function is for returning alert
+function AlertHandler(alert, bg) {
+	document.getElementById("alert-container").innerHTML = `
+	<div class="alert alert-${bg} alert-dismissible fade show" role="alert">
+	${alert}
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+	`
+}
