@@ -1,39 +1,189 @@
-
+:root
+{
+	--background_hitam :#242424;
+	--background_hitam_hitam :#1b1b1b;
+	--text-color-hitam:#afafaf;
+	--highlight-hitam:#E58C17;
+}
 .container-fluid {
 	height:100vh;
-	background-color:#292a2c;
-}
+	width: 100vh;
+	background-color:var(--background_hitam);
 
+}
+.icon
+{
+	width: 164px;
+	height: auto;
+	fill: var(--highlight-hitam);
+}
+#first-select
+{
+	border: solid #141414;
+	border-width: 0 0 1pt 0;
+}
+#second-select
+{
+	border: solid #141414;
+	border-width: 0 0 1pt 0;
+}
+.kontainer-kanan
+{
+	border: solid #141414;
+	border-width: 1pt 1pt 1pt 0pt;
+	box-shadow: rgba(0, 0, 0, 0.25) 3px 1px 7px 3px; 
+}
+.kontainer-kiri
+{
+	border: solid #141414;
+	border-width: 1pt 0 1pt 1pt;
+	box-shadow: rgba(0, 0, 0, 0.25) -3px 1px 7px 3px; 
+}
 .konversi-container {
 	display:flex;
 	width:100%;
 	justify-content:center;
+	position: relative;
+	margin-top: 10vh;
+}
+
+.rumus-container
+{
+	display:flex;
+	width:100%;
+	justify-content:center;
+	position: relative;
+}
+.saved-container
+{
+	display:flex;
+	justify-content:center;
+	position: relative;
+}
+.rumus-parent-box
+{
+	border: solid #141414;
+	border-width: 0 1pt;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 7px 7px 6px; 
 }
 
 .form-group select {
-	background-color:#242424;
-	border:1px solid #1a1a1a;
+	background-color:var(--background_hitam);
+	border:1pt solid var(--background_hitam_hitam);
 	font-size:20px;
 	border-radius:0px;
-	color:#afafaf;
+	color:var(--text-color-hitam);
 }
 
 .form-group select:focus{
-	background-color:#242424;
-	color:#afafaf;
+	background-color:var(--background_hitam);
+	color:white;
 	outline:none;
 }
-
+.output-rumus .form-control
+{
+	height: 10vh;
+}
+.hasil-konversi
+{
+	background-color:var(--background_hitam) !important;
+}
+.input-konversi
+{
+display: flex;
+}
 .hasil-konversi textarea {
 	border-radius:0px;
-	background-color:#242424 !important;
-	border:1px solid #1a1a1a;
+	background-color:var(--background_hitam) !important;
+	border: none;
 	color:white;
 	height:140px;
 }
 
 .hasil-konversi textarea:focus {
-	background-color:#242424;
+	background-color:var(--background_hitam);
 	color:white;
 
+}
+.top-bar
+{
+	position: absolute;
+	float: left;
+	width: 100%;
+	background-color: var(--background_hitam_hitam);
+	height: 35%;
+	border-bottom: solid black 1px;
+	box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 15px;
+}
+.nav-bar
+{
+	border-bottom: solid black 1px;
+	background-color: var(--background_hitam);
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.box-rumus
+{
+	font-weight: 696;
+	color: var(--background_hitam);
+	font-size: 18px;
+	padding: 6px 10px;
+	border-radius: 1vh;
+	background-color: var(--highlight-hitam);
+	width: fit-content;
+	height: fit-content;
+}
+.rumus-parent-box .hasil-konversi .input-konversi
+{
+	width: 100%;
+}
+.top-rumus-section
+{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.btn-bottom
+{
+	justify-content: center;
+	border-radius: 50px;
+	margin: 5px;
+	padding: 15px;
+	background-color: var(--background_hitam);
+	border: solid var(--background_hitam_hitam) 2pt;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+}
+.btn-bottom:hover
+{
+	background-color: var(--background_hitam_hitam);
+}
+.icon-bottom
+{
+	fill: white;
+	color: white;
+}
+.icon-bottom:hover
+{
+	color: var(--text-color-hitam);
+	fill: var(--text-color-hitam);
+}
+.icon-bottom:active
+{
+	fill: var(--highlight-hitam);
+	color: var(--highlight-hitam);
+}
+
+.sidebar {
+	top: 14vh;
+	right: 0vh;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	width: 50vh;
+	background-color: var(--background_hitam_hitam);
+	position: fixed;
+	height: 100%;
+	overflow: auto;
 }
