@@ -14,8 +14,12 @@ window.addEventListener("load", () => {
     // set the parameter url by what is in the localStorage 
    if(localStorage.getItem("lang") == "id") {
     window.history.replaceState(null, null, "?lang=id");
+    langBtn.value = "id"
+    langBtn.innerHTML ="Indonesia"
    } else {
     window.history.replaceState(null, null, "?lang=en");
+    langBtn.value = "en"
+    langBtn.innerHTML ="English"
    }  
    
    changeLanguageHtmlHandler(langVal)
@@ -23,31 +27,29 @@ window.addEventListener("load", () => {
 })
 
 // what this code do is, when the user select the lang, it automaticly change the language 
-langSelect.addEventListener("change", () => {
-    localStorage.setItem("lang", langSelect.value)
-    window.history.replaceState(null, null, `?lang=${langSelect.value}`);
-    changeLanguageHtmlHandler(langSelect.value)
+langBtn.addEventListener("click", () => {
+    if(langBtn.value == "id") {
+        localStorage.setItem("lang", "en")
+        window.history.replaceState(null, null, `?lang=en`)
+        langBtn.value = "en"
+        langBtn.innerHTML = "English"
+        changeLanguageHtmlHandler(langBtn.value)
+    } else {
+        localStorage.setItem("lang", "id")
+        window.history.replaceState(null, null, `?lang=id`)
+        langBtn.value = "id"
+        langBtn.innerHTML = "Indonesia"
+        changeLanguageHtmlHandler(langBtn.value)
+    }
 })
 
 // what this function do is, to change the html element with the language selected
 function changeLanguageHtmlHandler(langVal) {
     if(langVal === "id") {
-        langSelect.value = "id"
-        switchTempt.innerHTML = "Tukar"
-        copyIptFirst.innerHTML = "Salin"
-        copyIptSecond.innerHTML = "Salin"
-        hearBtnFirst.innerHTML = "Dengar"
-        hearBtnSecond.innerHTML = "Dengar"
-        SaveBtn.innerHTML = "Simpan"
+       
 
 
     } else{
-        langSelect.value = "en"
-        switchTempt.innerHTML = "Switch"
-        copyIptFirst.innerHTML = "Copy"
-        copyIptSecond.innerHTML = "Copy"
-        hearBtnFirst.innerHTML = "Hear"
-        hearBtnSecond.innerHTML = "Hear"
-        SaveBtn.innerHTML = "Save"
+       
     }
 }

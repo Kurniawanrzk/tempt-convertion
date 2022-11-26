@@ -8,4 +8,13 @@ const firstSelect = document.getElementById("first-select"),
 		hearBtnFirst = document.getElementById("hear-btn-first"),
 		hearBtnSecond = document.getElementById("hear-btn-second"),
 		SaveBtn = document.getElementById("sv-current-val"),
-		langSelect = document.getElementById("lang-select")
+		langBtn = document.getElementById("lang-btn"),
+		SaveBtnSide = document.getElementById("save-btn-side"),
+		Sidebar = document.querySelector(".sidebar"),
+		CloseSidebar = document.getElementById("close-sidebar"),
+		TitleSidebar = document.getElementById("title-sidebar"),
+		ContentSidebar = document.getElementById("sidebar-content"),
+		ThemeSwitch = document.getElementById("ThemeSwitch"),
+		HistoryBtn = document.getElementById("history-btn")
+
+	

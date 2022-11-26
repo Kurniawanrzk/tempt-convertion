@@ -4,8 +4,12 @@
 // What this line of code do is, when user click the first copy button, it gonna copy
 // the number that you input
 copyIptFirst.addEventListener('click', () => {
-    firstIpt.select()
-    navigator.clipboard.writeText(firstIpt.value)
+    navigator.clipboard
+    .readText()
+    .then(paste => 
+        (
+            firstIpt.value = paste.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')
+        ), err => alert("kontol"))
 })
 
 // What this line of code do is, when user click the first copy button, it gonna copy
