@@ -9,7 +9,7 @@ copyIptFirst.addEventListener('click', () => {
     .then(paste => 
         (
             firstIpt.value = paste.replace(/[^0-9-.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0')
-        ), err => alert("kontol"))
+        ))
 })
 
 // What this line of code do is, when user click the first copy button, it gonna copy

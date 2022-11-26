@@ -15,6 +15,7 @@ const firstSelect = document.getElementById("first-select"),
 		TitleSidebar = document.getElementById("title-sidebar"),
 		ContentSidebar = document.getElementById("sidebar-content"),
 		ThemeSwitch = document.getElementById("ThemeSwitch"),
-		HistoryBtn = document.getElementById("history-btn")
+		HistoryBtn = document.getElementById("history-btn"),
+		switchTemptMobile = document.getElementById("tukar-btn-mobile")
 
 	
