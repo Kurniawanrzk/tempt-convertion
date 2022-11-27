@@ -1,4 +1,39 @@
 // THE CONVERTION HANDLER 
+    // this variable is to get the symbol of what tempratur type
+// We select in the first select 
+const getFirstTemptSymb = firstSelect.value == "1" ?
+" °C" : firstSelect.value == "2" ? 
+" °F" : firstSelect.value == "3" ? 
+" °Ré" : firstSelect.value == "4" ?  
+" K" : firstSelect.value == "5" ? 
+" °R" : "",
+// this variable is to get the symbol of what tempratur type
+// We select in the second select
+
+getSecondTemptSymb = secondSelect.value == "1" ?
+" °C" : secondSelect.value == "2" ? 
+" °F" : secondSelect.value == "3" ? 
+" °Ré" : secondSelect.value == "4" ?  
+" K" : secondSelect.value == "5" ? 
+" °R" : "",
+
+// this variable is to get the full tempratur ("not the symbol") type
+// We select in the first select
+getFirstTempt =  firstSelect.value == "1" ? 
+"Celcius" : firstSelect.value == "2" ? 
+"Farenheit" : firstSelect.value == "3" ? 
+"Reamur" : firstSelect.value == "4" ? 
+"Kelvin" : firstSelect.value == "5" ? 
+"Rankine" : "",
+
+// this variable is to get the full tempratur ("not the symbol") type
+// We select in the first selects
+getSecondTempt = secondSelect.value == "1" ? 
+"Celcius" : secondSelect.value == "2" ? 
+"Farenheit" : secondSelect.value == "3" ? 
+"Reamur" : secondSelect.value == "4" ? 
+"Kelvin" : secondSelect.value == "5" ? 
+"Rankine" : ""
 
 // This line of code is for, every user that do input event, is gonna run Convertion Function
 firstIpt.addEventListener('input', Convertion)
@@ -13,8 +48,20 @@ secondSelect.addEventListener("change", Convertion)
 // Fungsi ini berfungsi untuk mengkonversi suhu
 function Convertion() {
 
-	let SuhuHasil = "Derajat 2";
-	let SuhuAwal = "Derajat 1";
+	let SuhuAwal = firstSelect.value == "1" ?
+	" °C " : firstSelect.value == "2" ? 
+	" °F " : firstSelect.value == "3" ? 
+	" °Ré " : firstSelect.value == "4" ?  
+	" K " : firstSelect.value == "5" ? 
+	" °R " : "",
+
+	SuhuHasil = secondSelect.value == "1" ?
+	" °C " : secondSelect.value == "2" ? 
+	" °F " : secondSelect.value == "3" ? 
+	" °Ré " : secondSelect.value == "4" ?  
+	" K " : secondSelect.value == "5" ? 
+	" °R " : ""
+
 	let atas = SuhuAwal +" > " +SuhuHasil+"\r\n"
 	
 
@@ -88,10 +135,10 @@ function Convertion() {
 
 	}else if(firstSelect.value === "2" && secondSelect.value === "5" && firstIpt.value !== "") {
 		// Farenheit -> Rankine
-		 secondIpt.value = parseFloat(firstIpt.value) + 459 + ".67"
+		 secondIpt.value = parseFloat(firstIpt.value) + 459.67
 		 OutputRumus.value = atas +
 		   firstIpt.value + " + 459.67" + "\r\n = "
-		 + (parseFloat(firstIpt.value) + 459) + ".67" + SuhuHasil
+		 + (parseFloat(firstIpt.value) + 459.67) + SuhuHasil
 		 
 	}else if(firstSelect.value === "3" && secondSelect.value === "1" && firstIpt.value !== "") {
 		// Reamur -> Celcius
@@ -124,13 +171,12 @@ function Convertion() {
 		 
 	}else if(firstSelect.value === "3" && secondSelect.value === "5" && firstIpt.value !== "") {
 		// Reamur -> Rankine
-		 secondIpt.value = (parseFloat(firstIpt.value) * (9/4)) + 491 +".67"
-
+		 secondIpt.value = (parseFloat(firstIpt.value) * (9/4)) + 491.67
 		 OutputRumus.value = atas +
 		   firstIpt.value + " x (9/4) + 491.67" + "\r\n = "
 		 + (parseFloat(firstIpt.value) * 9) + "/4 + 491.67" + "\r\n = "
 		 + (parseFloat(firstIpt.value) * (9/4)) + " + 491.67" + "\r\n = "
-		 + ((parseFloat(firstIpt.value) * (9/4)) + 491) + ".67" + SuhuHasil
+		 + ((parseFloat(firstIpt.value) * (9/4)) + 491.67) + SuhuHasil
 
 	}else if(firstSelect.value === "4" && secondSelect.value === "1" && firstIpt.value !== "") {
 		// Kelvin -> Celcius
@@ -223,9 +269,8 @@ function Convertion() {
 // This function is for returning alert
 function AlertHandler(alert, bg) {
 	document.getElementById("alert-container").innerHTML = `
-	<div class="alert alert-${bg} alert-dismissible fade show" role="alert">
-	${alert}
-	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+	<div style="font-weight: 500; padding: 2px 8px; width: fit-content; float: right" class="peringatan me-3 alert alert-${bg} alert-dismissible fade show" role="alert">
+			${alert}
+	</div>
 	`
 }

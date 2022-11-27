@@ -22,10 +22,8 @@ hearBtnFirst.addEventListener('click', () => {
             firstIpt.value.replace(".", ",").replace("-", "minus") + "Kelvin" : firstSelect.value == "5" ? 
             firstIpt.value.replace(".", ",").replace("-", "minus") + "°Rankine" : "", 'US English Female')
        }, 1000)
-    }  else if(firstIpt.value == "" && localStorage.getItem("lang") == "id") {
-        AlertHandler("Silahkan Masukkan Angka!", "warning")
     } else {
-        AlertHandler("Please Insert the number!", "warning")
+       localStorage.getItem("lang") == "id" ? AlertHandler("Silahkan isi nomor suhu!", "danger") :  AlertHandler("Please Insert the number!", "danger")
     }
 })
 hearBtnSecond.addEventListener('click', () => {
@@ -49,9 +47,7 @@ hearBtnSecond.addEventListener('click', () => {
             secondIpt.value.replace(".", ",").replace("-", "minus") + "Kelvin" : secondSelect.value == "5" ? 
             secondIpt.value.replace(".", ",").replace("-", "minus") + "°Rankine" : "", 'US English Female')
         }, 1000)
-    } else if(secondIpt.value == "" && localStorage.getItem("lang") == "id") {
-        AlertHandler("Silahkan Masukkan Angka!", "warning")
     } else {
-        AlertHandler("Please Insert the number!", "warning")
+        localStorage.getItem("lang") == "id" ? AlertHandler("Silahkan isi nomor suhu!", "danger") :  AlertHandler("Please Insert the number!", "danger")
     }
 })

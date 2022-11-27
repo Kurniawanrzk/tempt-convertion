@@ -8,7 +8,7 @@ function reloadHistory() {
         dataHistory.shift()
         dataHistory.forEach((data, idx) => {
             ContentSidebar.innerHTML += `
-                <div style="display:flex;gap:100px;" class="border border-1 p-1">
+                <div id="ipt-fill" class="sidebar-array p-2 mb-1">
                     <div>.${idx + 1} ${data.firstSelect} -> ${data.secondSelect} <br> ${data.main} = ${data.result} </div>
                 </div>
             `
