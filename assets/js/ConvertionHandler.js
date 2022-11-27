@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+	localStorage.getItem("theme") == "dark" ? document.getElementById("ico").href = "/OrangeFavico.ico" : document.getElementById("ico").href =  "/BlueFavico.ico"
+})
+
 // THE CONVERTION HANDLER 
     // this variable is to get the symbol of what tempratur type
 // We select in the first select 
@@ -511,7 +515,7 @@ function Convertion() {
 
 		
 	}
-	if (secondIpt.value == "NaN") {
+if (firstIpt.value == ".") {
 		Penjelasan.value = localStorage.getItem("lang") == "id" ?
 		"yang benar saja"
 		:
