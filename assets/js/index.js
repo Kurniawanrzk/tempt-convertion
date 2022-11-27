@@ -16,6 +16,10 @@ const firstSelect = document.getElementById("first-select"),
 		ContentSidebar = document.getElementById("sidebar-content"),
 		ThemeSwitch = document.getElementById("ThemeSwitch"),
 		HistoryBtn = document.getElementById("history-btn"),
-		switchTemptMobile = document.getElementById("tukar-btn-mobile")
+		switchTemptMobile = document.getElementById("tukar-btn-mobile"),
+		OutputRumus = document.getElementById("output-rumus"),
+		OutputSection = document.getElementById("output-section"),
+		CopyResult = document.getElementById("copy-result"),
+		ResetIpt = document.getElementById("btn-reset")
 
 	

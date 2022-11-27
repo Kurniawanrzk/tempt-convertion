@@ -3,7 +3,7 @@ function reloadHistory() {
     if(localStorage.getItem("sidebar") == "false") {
         localStorage.setItem("sidebar", "true")
         Sidebar.style.display = "block"
-        TitleSidebar.innerHTML = "HISTORY"
+        TitleSidebar.innerHTML = "History"
         let dataHistory = JSON.parse(localStorage.getItem("history-tempt"))
         dataHistory.shift()
         dataHistory.forEach((data, idx) => {

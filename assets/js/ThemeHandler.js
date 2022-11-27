@@ -21,13 +21,13 @@ ThemeSwitch.addEventListener("click", () => {
         ThemeLight()
         setTimeout(() => {
             window.location.reload()
-        }, 140)
+        }, 0)
     } else {
         localStorage.setItem("theme", "dark")
         ThemeDark()
         setTimeout(() => {
             window.location.reload()
-        }, 140)
+        }, 0)
     }
 })
 
@@ -36,7 +36,7 @@ function ThemeDark() {
     document.documentElement.style.setProperty('--background_hitam_hitam', '#1b1b1b')
     document.documentElement.style.setProperty('--text-color-hitam', '#afafaf')
     document.documentElement.style.setProperty('--text-color-hitam-hover', '#696969')
-    document.documentElement.style.setProperty('--highlight-hitam', '#e58c17')
+    document.documentElement.style.setProperty('--highlight-hitam', '#D87300')
     document.documentElement.style.setProperty('--border-hitam','#070707')
     document.documentElement.style.setProperty('--shadow-hitam',' rgba(0, 0, 0, 0.25)')
 }

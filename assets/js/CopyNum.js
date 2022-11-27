@@ -18,3 +18,15 @@ copyIptSecond.addEventListener('click', () => {
     secondIpt.select()
     navigator.clipboard.writeText(secondIpt.value)
 })
+CopyResult.addEventListener('click', () => {
+    OutputRumus.select()
+    navigator.clipboard.writeText(OutputRumus.value)
+})
+
+// RESET INPUT
+
+ResetIpt.addEventListener('click', () => {
+    firstIpt.value = ""
+    secondIpt.value = ""
+    OutputRumus.value = ""
+})

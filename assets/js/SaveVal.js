@@ -25,14 +25,14 @@ window.addEventListener("load", () => {
 
     if(localStorage.getItem("sidebar") == "true") {
         Sidebar.style.display = "block"
-        TitleSidebar.innerHTML = "SAVE"
+        TitleSidebar.innerHTML = "Saved"
         let dataSave = JSON.parse(localStorage.getItem("save-tempt"))
         dataSave.shift()
         dataSave.forEach((data, idx) => {
             ContentSidebar.innerHTML += `
-                <div style="display:flex;gap:100px;" class="border border-1 p-1">
+                <div class="sidebar-array p-2 mb-1">
                     <div>.${idx + 1} ${data.firstSelect} -> ${data.secondSelect} <br> ${data.main} = ${data.result} </div>
-                    <div><i id="delete-sidebar" onclick="deleteSave(${idx + 1})" class="fa-solid fa-trash icon-bottom"></i></div>
+                    <div style="position:absolute; right:2vh;"><i id="delete-sidebar" onclick="deleteSave(${idx + 1})" class="fa-solid fa-trash icon-bottom"></i></div>
                 </div>
             `
         })
@@ -150,14 +150,14 @@ function reload() {
     if(localStorage.getItem("sidebar") == "false") {
         localStorage.setItem("sidebar", "true")
         Sidebar.style.display = "block"
-        TitleSidebar.innerHTML = "SAVE"
+        TitleSidebar.innerHTML = "Saved"
         let dataSave = JSON.parse(localStorage.getItem("save-tempt"))
         dataSave.shift()
         dataSave.forEach((data, idx) => {
             ContentSidebar.innerHTML += `
-                <div style="display:flex;gap:100px;" class="border border-1 p-1">
+            <div class="sidebar-array p-2 mb-1">
                     <div>.${idx + 1} ${data.firstSelect} -> ${data.secondSelect} <br> ${data.main} = ${data.result} </div>
-                    <div><i id="delete-sidebar" onclick="deleteSave(${idx + 1})" class="fa-solid fa-trash icon-bottom"></i></div>
+                    <div style="position:absolute; right:2vh;"><i id="delete-sidebar" onclick="deleteSave(${idx + 1})" class="fa-solid fa-trash icon-bottom"></i></div>
                 </div>
             `
         })
