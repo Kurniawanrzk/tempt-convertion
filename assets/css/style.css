@@ -1,14 +1,23 @@
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 :root {	
 	--shadow: rgba(0, 0, 0, 0.25);
   }
   body
 	{
 	background-color: var(--background_hitam) !important;
+	animation: fade-in 200ms linear;
 	}
 
   .container-fluid {
 	color: var(--text-color-hitam);
-	height: 100%;
 	width: 100vh;
 	background-color: var(--background_hitam);
   }
@@ -37,9 +46,6 @@
 	border-color: var(--background_hitam)  var(--background_hitam_hitam) var(--background_hitam_hitam) var(--background_hitam);
 	}
 
-  .alert-container {
-	display: none;
-	}
   .icon {
 	width: 164px;
 	height: auto;
@@ -93,7 +99,7 @@
 	position: relative;
   }
   .saved-container {
-	height: 140px;
+
 	display: flex;
 	justify-content: center;
 	position: relative;
@@ -258,6 +264,10 @@
 	width: 50px;
 	height: 25px;
   }
+  .credit
+  {
+	display: flex; font-size: 2vh;
+  }
   .voice-over
   {
 	position: fixed;
@@ -277,10 +287,25 @@
   .swap {
 	display: none;
   }
-  
+
+	@keyframes alert {
+		from
+		{
+			opacity: 1
+		}
+		to
+		{
+			opacity: 0;
+		}
+	}
+
+  .peringatan {
+	align-self: center;
+	opacity: 0;
+	animation: alert 2500ms ease-in-out
+  }
   @media only screen and (max-width: 1024px) {
 	.container-fluid {
-	  height: 120vh;
 	  width: 100vh;
 	  background-color: var(--background_hitam);
 	}
@@ -292,6 +317,10 @@
   }
   
   @media only screen and (max-width: 425px) {
+	.credit
+	{
+		margin-top: 5vh;
+	}
 	.language {
 		font-size: 14px;
 	  }
@@ -321,7 +350,6 @@
 	  box-shadow: var(--shadow-hitam) -3px 1px 7px 3px;
 	}
 	.container-fluid {
-	  height: 200vh;
 	  width: 100vh;
 	  background-color: var(--background_hitam);
 	}

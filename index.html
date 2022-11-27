@@ -11,7 +11,6 @@
   <body>
     <!-- CREATED BY gh : Kurniawanrzk AND gh : brotherzhafif -->
 
-		
 		<div class="sidebar">
 
 			<div class="history-bar">
@@ -30,7 +29,6 @@
 			</div>
 
 		</div> 
-
 
     <div class="top-bar">
       <div class="nav-bar">
@@ -356,9 +354,9 @@
             </g>
           </svg>
         </div>
-
         <div class="col-10">
           <div class="setting-dikanan">
+            
             <div class="setting-dikanan form-switch m-3">
               <input class="form-check-input ms-5" value="" type="checkbox" role="switch" id="ThemeSwitch" />
               <button id="lang-btn" value="" class="language ms-5" style="border: none;background:none"></button>
@@ -380,7 +378,7 @@
                 <option value="2">Farenheit</option>
                 <option value="3">Reamur</option>
                 <option value="4">Kelvin</option>
-                <option value="5">Rankie</option>
+                <option value="5">Rankine</option>
               </select>
             </div>
 
@@ -420,9 +418,6 @@
                 </button>
 
                 <div style="width:100%" class="alert-container" id="alert-container">
-                  <div style="font-weight: 500; padding: 2px 8px; width: fit-content; float: right" class="peringatan alert alert-warning alert-dismissible fade show" role="alert">
-					Anda Belum Memasukan Suhu
-				</div>
                 </div>
               </div>
             </div>
@@ -452,7 +447,7 @@
                 <option value="2" selected>Farenheit</option>
                 <option value="3">Reamur</option>
                 <option value="4">Kelvin</option>
-                <option value="5">Rankie</option>
+                <option value="5">Rankine</option>
               </select>
             </div>
 
@@ -544,7 +539,7 @@
       <!-- BUTTON YANG DIBAWAH BUAT APALAH HISTORI-->
 
       <div class="saved-container">
-        <div class="pt-4">
+        <div class="pt-3">
           <div>
             <button class="btn-bottom" id="history-btn">
               <svg class="icon-bottom" width="48" height="auto" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
@@ -568,13 +563,21 @@
           </div>
         </div>
       </div>
+
+      <div class="credit">
+        Created By <a href="https://github.com/Kurniawanrzk" class="icon-bottom ms-1 me-1 mb-0">Kurniawanrzk</a> And <a href="https://github.com/brotherzhafif" class="icon-bottom ms-1 me-1 mb-0">BrotherZhafif</a>
+      </div>
     </div>
 
+    <!-- Speak Penjelasan -->
+
+    <textarea style="display: none;" id="txt-penjelasan">Something she will said</textarea>
+
 	  <script  type="text/JavaScript" src="./assets/js/index.js"></script>
+    <script  type="text/JavaScript" src="./assets/js/ConvertionHandler.js"></script>
     <script  type="text/JavaScript" src="./assets/js/HistoryHandler.js"></script>
     <script  type="text/JavaScript" src="./assets/js/ThemeHandler.js"></script>
 	  <script  type="text/JavaScript" src="./assets/js/LangHandler.js"></script>
-    <script  type="text/JavaScript" src="./assets/js/ConvertionHandler.js"></script>
     <script  type="text/JavaScript"  src="./assets/js/SwitchTempt.js"></script>
     <script  type="text/JavaScript"  src="./assets/js/CopyNum.js"></script>
     <script  type="text/JavaScript"  src="./assets/js/NumToVoice.js"></script>
