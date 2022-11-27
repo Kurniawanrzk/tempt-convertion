@@ -87,11 +87,11 @@ getSecondTempt = secondSelect.value == "1" ?
         
     })
     localStorage.setItem("save-tempt", JSON.stringify(saveData))
-        AlertHandler("Berhasil Di Simpan", "success")
+        localStorage.getItem("lang") == "id" ? AlertHandler("Berhasil Di Simpan", "success") : AlertHandler("Saved", "success") 
     } else if(firstIpt.value == "") {
-       AlertHandler("Silahkan Masukkan Angka!", "warning")
+        localStorage.getItem("lang") == "id" ? AlertHandler("Silahkan Masukkan Angka!", "danger") : AlertHandler("Please Insert The Number", "danger") 
     } else {
-       AlertHandler("Konversi Ini Sudah Anda Simpan", "warning")
+        localStorage.getItem("lang") == "id" ? AlertHandler("Konversi Ini Sudah Di Simpan", "warning") : AlertHandler("This Convertion Already Saved", "warning") 
     }
 })
 

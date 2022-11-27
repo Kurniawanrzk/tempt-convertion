@@ -20,6 +20,9 @@ const firstSelect = document.getElementById("first-select"),
 		OutputRumus = document.getElementById("output-rumus"),
 		OutputSection = document.getElementById("output-section"),
 		CopyResult = document.getElementById("copy-result"),
-		ResetIpt = document.getElementById("btn-reset")
+		ResetIpt = document.getElementById("btn-reset"),
+		Penjelasan = document.getElementById("txt-penjelasan"),
+		MascotContainer = document.getElementById("mascot-container"),
+		QuestionBtn = document.getElementById("question-btn")
 
 	
