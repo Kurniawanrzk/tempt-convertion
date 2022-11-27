@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
-	localStorage.getItem("theme") == "dark" ? document.getElementById("ico").href = "/OrangeFavico.ico" : document.getElementById("ico").href =  "/BlueFavico.ico"
+	localStorage.getItem("theme") == "dark" ? document.getElementById("ico").href = "/OrangeFavico.ico" : 
+	document.getElementById("ico").href =  "/BlueFavico.ico"
 })
 
 // THE CONVERTION HANDLER 

@@ -16,10 +16,12 @@ window.addEventListener("load", () => {
     window.history.replaceState(null, null, "?lang=id");
     langBtn.value = "id"
     langBtn.innerHTML ="Indonesia"
+    document.getElementById("rumus-kon").innerHTML = "Rumus / Penyelesaian"
    } else {
     window.history.replaceState(null, null, "?lang=en");
     langBtn.value = "en"
     langBtn.innerHTML ="English"
+    document.getElementById("rumus-kon").innerHTML = "Formula / Solution"
    }  
    
    changeLanguageHtmlHandler(langVal)
@@ -33,12 +35,14 @@ langBtn.addEventListener("click", () => {
         window.history.replaceState(null, null, `?lang=en`)
         langBtn.value = "en"
         langBtn.innerHTML = "English"
+        document.getElementById("rumus-kon").innerHTML = "Formula / Solution"
         changeLanguageHtmlHandler(langBtn.value)
     } else {
         localStorage.setItem("lang", "id")
         window.history.replaceState(null, null, `?lang=id`)
         langBtn.value = "id"
         langBtn.innerHTML = "Indonesia"
+        document.getElementById("rumus-kon").innerHTML = "Rumus / Penyelesaian"
         changeLanguageHtmlHandler(langBtn.value)
     }
 })
