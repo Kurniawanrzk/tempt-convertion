@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+	localStorage.getItem("theme") == "dark" ? document.getElementById("ico").href = "/OrangeFavico.ico" : 
+	document.getElementById("ico").href =  "/BlueFavico.ico"
+})
+
 // THE CONVERTION HANDLER 
     // this variable is to get the symbol of what tempratur type
 // We select in the first select 
@@ -500,7 +505,7 @@ function Convertion() {
 		OutputRumus.value = atas + firstIpt.value + " = " + secondIpt.value
 
 		
-	} else if (firstIpt.value == "") {
+	} else if (firstIpt.value == "" || firstIpt.value == "."  ) {
 		Penjelasan.value = localStorage.getItem("lang") == "id" ?
 		"apa yang harus saya jelaskan ?"
 		:
@@ -511,8 +516,7 @@ function Convertion() {
 
 		
 	}
-
-	if (secondIpt.value == "NaN") {
+if (firstIpt.value == ".") {
 		Penjelasan.value = localStorage.getItem("lang") == "id" ?
 		"yang benar saja"
 		:
@@ -527,9 +531,9 @@ function Convertion() {
 
 // This function is for returning alert
 function AlertHandler(alert, bg) {
-	document.getElementById("alert-container").value = `
-	<div style="font-weight: 500; padding: 2px 8px; width: fit-content; float: right" class="peringatan me-3 alert alert-${bg} alert-dismissible fade show" role="alert">
+	document.getElementById("alert-container").innerHTML = `
+	<div id="apalah" style="font-weight: 500; padding: 2px 8px; width: fit-content; float: right" class="peringatan me-3 alert alert-${bg} alert-dismissible fade show" role="alert">
 			${alert}
-	</div>
+	</div>	
 	`
 }

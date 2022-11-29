@@ -21,6 +21,8 @@ const firstSelect = document.getElementById("first-select"),
 		OutputSection = document.getElementById("output-section"),
 		CopyResult = document.getElementById("copy-result"),
 		ResetIpt = document.getElementById("btn-reset"),
-		Penjelasan = document.getElementById("txt-penjelasan")
+		Penjelasan = document.getElementById("txt-penjelasan"),
+		MascotContainer = document.getElementById("mascot-container"),
+		QuestionBtn = document.getElementById("question-btn")
 
 	
